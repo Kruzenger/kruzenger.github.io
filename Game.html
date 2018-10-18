@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Game</title>
+</head>
+<body>
+<script>
+	var arr = Array();
+	var arr1 = Array();
+	var arr2 = Array();
+	for (var i = 0; i <= 10; i++) {
+		arr[i] = i + 1;
+		arr1[i] = i + 1;
+		arr2[i] = i + 1;
+	}
+
+	var c;
+	var c1;
+	var g = 2;
+	
+
+	for (var f = 1; f = true; f++) {
+		var rand = Math.floor(Math.random() * arr.length);
+		var rand1 = Math.floor(Math.random() * arr1.length);
+		var rand2 = Math.floor(Math.random() * arr2.length);
+		
+		c = rand;
+		c1 = rand1;
+		c2 = rand2;
+		if (g > 10 && g <= 20 ){
+			var a = prompt('сколько будет? ' + c + ' * ' + c1 );
+
+			if (a == c1 * c){
+				alert( 'ты молодец ');
+				alert( 'уровень ' + (g));
+				g++;
+			}
+			else{
+				alert('ты проиграл');
+				break;
+			} 
+		}	
+		else{
+			if (g <= 10 ){
+				var a = prompt('сколько будет? ' + c + ' + ' + c1 );
+
+				if (a == c1 + c){
+					alert( 'ты молодец ');
+					alert( 'уровень ' + (g));
+					g++;
+				}
+				else{
+					alert('ты проиграл');
+					break;	
+				}
+			}
+			else{
+				if (g > 20 ){
+				var a = prompt('сколько будет? ( ' + c + ' * ' + c1 + ' ) + ' + c2);
+
+				if (a == c1 * c + c2){
+					alert( 'ты молодец ');
+					alert( 'уровень ' + (g));
+					g++;
+				}
+				else{
+					alert('ты проиграл');
+					break;
+				}
+			}
+			else{
+				break;
+			}	
+		}
+	}
+}
+
+
+
+
+
+</script>
+</body>
+</html>

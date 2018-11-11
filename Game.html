@@ -17,21 +17,19 @@
 		const LEVELS_PER_STAGE = 10;
 
 		function Second_10(human_guess, number1, number0, lvl, count) {
-			document.body.innerHTML = '';
 			if (human_guess == number1 * number0){
 				alert('ты молодец, ' + 'уровень ' + (lvl + 1));
 				count = 1;
 				return count;
 			}
 			else{
-				alert('ты проиграл, ' + 'уровень  1';
+				alert('ты проиграл, ' + 'уровень  1');
 				count = -1;
 				return count;
 			} 
 		}
 
 		function first_10(human_guess, number1, number0, lvl, count) {
-			document.body.innerHTML = '';
 			if (human_guess == number1 + number0){	
 				alert('ты молодец, ' +  'уровень ' + (lvl + 1)); 
 				count = 1;
@@ -45,7 +43,6 @@
 		}
 
 		function third_10(human_guess, number1, number0, number2, lvl, count) {
-			document.body.innerHTML = '';
 			if (human_guess == number1 * number0 + number2){
 				alert('ты молодец, ' + 'уровень ' + (lvl + 1));
 				count = 1;
@@ -70,7 +67,7 @@
 				if(first_10(human_guess, number1, number0, lvl, 0) == 1){
 					lvl++;
 				}
-			    else {
+			    	else {
 					lvl = 1;
 				}
 			}	
@@ -86,20 +83,20 @@
 				}
 				else{
 					if (lvl > LEVELS_PER_STAGE * 2 ){
-					human_guess = prompt('сколько будет? ' + number0 + ' * ' + number1 + ' + ' + number2);
-					if(third_10(human_guess, number1, number0, number2, lvl, 0) == 1){
-						lvl++;
+						human_guess = prompt('сколько будет? ' + number0 + ' * ' + number1 + ' + ' + number2);
+						if(third_10(human_guess, number1, number0, number2, lvl, 0) == 1){
+							lvl++;
+						}
+						else{
+							lvl = 1;
+						}
 					}
 					else{
-						lvl = 1;
-					}
+						break;
+					}	
 				}
-				else{
-					break;
-				}	
 			}
 		}
-	}
 
 
 

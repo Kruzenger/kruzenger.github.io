@@ -15,12 +15,6 @@
 		
 		const MAX_NUM = 9;
 		const LEVELS_PER_STAGE = 10;
-		
-
-		function human_Guess() {
-			var answer = prompt('Ответ?');
-			return answer;
-		}
 
 		function Second_10(human_guess, number1, number0, lvl, count) {
 			document.body.innerHTML = '';
@@ -71,9 +65,8 @@
 			number0 = Math.floor(Math.random() * MAX_NUM);
 			number1 = Math.floor(Math.random() * MAX_NUM);
 			number2 = Math.floor(Math.random() * MAX_NUM);
-			if (lvl <= LEVELS_PER_STAGE){
-				alert('сколько будет? ' + number0 + ' + ' + number1 + '<br>');
-				human_guess = human_Guess();
+			if (lvl <= LEVELS_PER_STAGE)
+				human_guess = prompt('сколько будет? ' + number0 + ' + ' + number1);
 				if(first_10(human_guess, number1, number0, lvl, 0) == 1){
 					lvl++;
 				}
@@ -83,8 +76,7 @@
 			}	
 			else{
 				if (lvl > LEVELS_PER_STAGE && lvl <= LEVELS_PER_STAGE * 2 ){
-					alert('сколько будет? ' + number0 + ' * ' + number1 + '<br>');
-					human_guess = human_Guess();
+					human_guess = prompt('сколько будет? ' + number0 + ' * ' + number1);
 					if(Second_10(human_guess, number1, number0, lvl, 0) == 1){
 						lvl++;
 					}
@@ -94,8 +86,7 @@
 				}
 				else{
 					if (lvl > LEVELS_PER_STAGE * 2 ){
-					alert('сколько будет? ' + number0 + ' * ' + number1 + ' + ' + number2 + '<br>');
-					human_guess = human_Guess();
+					human_guess = prompt('сколько будет? ' + number0 + ' * ' + number1 + ' + ' + number2);
 					if(third_10(human_guess, number1, number0, number2, lvl, 0) == 1){
 						lvl++;
 					}

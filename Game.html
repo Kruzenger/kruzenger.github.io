@@ -62,7 +62,7 @@
 			number0 = Math.floor(Math.random() * MAX_NUM);
 			number1 = Math.floor(Math.random() * MAX_NUM);
 			number2 = Math.floor(Math.random() * MAX_NUM);
-			if (lvl <= LEVELS_PER_STAGE)
+			if (lvl <= LEVELS_PER_STAGE){
 				human_guess = prompt('сколько будет? ' + number0 + ' + ' + number1);
 				if(first_10(human_guess, number1, number0, lvl, 0) == 1){
 					lvl++;

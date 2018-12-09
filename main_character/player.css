@@ -1,0 +1,15 @@
+
+	body{
+		overflow: hidden;
+	}
+
+
+	.main_character_right{
+        background-image: url(/home/stas/Downloads/Programing/BUHF/textures/characters_spright/Stay_&_walk_&_charge.gif);
+        height: 150px;
+        width: 150px;
+        margin-top: 250px;
+        background-position-x: -50px; 
+    }
+
+   

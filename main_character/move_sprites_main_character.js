@@ -204,3 +204,18 @@ function hit(){
 		}
 	}
 }
+
+var man_with_mask = document.getElementById('man_with_mask');
+var man_with_mask_x_position_turn = 880;
+var side_of_man_with_mask = 1;
+
+var turn_man_with_mask_1 = setInterval(function(){
+	side_of_man_with_mask = 1;
+	console.log(side_of_man_with_mask);
+	man_with_mask.style.backgroundPositionX = '-' + man_with_mask_x_position_turn + 'px';
+}, 7000);
+var turn_man_with_mask_2 = setInterval(function(){
+	side_of_man_with_mask = 2;
+	console.log(side_of_man_with_mask);
+	man_with_mask.style.backgroundPositionX = 0;
+}, 14000);

@@ -11,5 +11,11 @@
         margin-top: 250px;
         background-position-x: -50px; 
     }
-
-   
+#man_with_mask{
+    background-image: url(../img/man_with_mask.png);
+    height: 150px;
+    width: 120px;
+    background-position-x: 0px;
+    margin-top: -140px;
+    margin-left: 1300px;    
+}

@@ -1,7 +1,7 @@
 
 	#BG{
 		overflow: hidden;
-		background: url(/home/stas/Downloads/Programing/BUHF/textures/BG/environment_forestbackground.gif);
+		background: url(Kruzenger/kruzenger.github.io/img/environment_forestbackground.gif);
 		height: 600px; 
 		width: 1000px;
 		margin-top: 10px;
@@ -9,7 +9,7 @@
 
 
 	#main_character{
-        background-image: url(/home/stas/Downloads/Programing/BUHF/textures/characters_spright/Stay_&_walk_&_charge.gif);
+        background-image: url(Kruzenger/kruzenger.github.io/img/Stay_&_walk_&_charge.gif);
         height: 150px;
         width: 150px;
         margin-top: 350px;

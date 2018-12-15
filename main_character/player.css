@@ -32,3 +32,20 @@
 	#All{
 		margin-top: 100px;
 	}
+
+#enemy{
+    background-image: url(../img/enemy_sprites.png);
+    display: flex;
+    height: 130px;
+    width: 120px;
+    margin-top: -130px;
+    margin-left: 800px;
+    background-position-x: 1230px;
+    background-position-y: 0px;
+}
+
+#Health_of_enemy{
+    height: 10px;
+    width: 80px;
+    margin-top: -10px;
+}

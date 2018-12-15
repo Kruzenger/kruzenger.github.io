@@ -74,6 +74,7 @@ function WAlking(e){
  			which_fun = 2;
  			Stamina_bar.value -= 20; 
  			hit();
+ 			hit_enemy();
  			break;
  		}
     }
@@ -117,7 +118,7 @@ function walk(){
 		main_character.style.backgroundPositionX = '-' + cadr_wight_right + 'px';
 		main_character.style.backgroundPositionY = '-' + cadr_height_right + 'px';
 
-		if (Xposition >= 500) {
+		if (Xposition >= 600) {
 			BG_Xposition -= 8;
 			BG.style.backgroundPositionX = BG_Xposition + 'px';
 		}
@@ -138,7 +139,7 @@ function walk(){
 		main_character.style.backgroundPositionX = '-' + cadr_wight_left + 'px';
 		main_character.style.backgroundPositionY = '-' + cadr_height_left + 'px';
 
-		if (Xposition <= -500) {
+		if (Xposition <= -600) {
 			BG_Xposition += 8;
 			BG.style.backgroundPositionX = BG_Xposition + 'px';
 		}	
@@ -220,7 +221,6 @@ function shield(){
 }
 
 function hit(){
-
 	if (side == 1) {
 
 		main_character.style.backgroundPositionX = '-' + cadr_hit_width_right + 'px';
@@ -269,4 +269,20 @@ function hit(){
 function Stamina_fulling(){
 	Stamina_bar.value += 1;
 	setTimeout(Stamina_fulling, 100);
+}
+
+var enemy = document.getElementById('enemy');
+var health_of_enemy;
+
+
+function hit_enemy() {
+	if (Xposition > 500){
+		Health_of_enemy.value -= 30;
+	}
+
+	if (Health_of_enemy.value == 0) {
+		enemy.style.backgroundPositionX = 854 + 'px';
+		enemy.style.backgroundPositionY = 1066 + 'px';
+	}
+
 }

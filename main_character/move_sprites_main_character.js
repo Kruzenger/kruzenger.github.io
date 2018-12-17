@@ -473,7 +473,7 @@ function enemy_stay_right(){
 function create_spear(){
 	spear_position = enemy_position;
 	spear.style.left = spear_position + 'px';
-	spear.style.background = "url(/home/stas/Downloads/Programing/BUHF/textures/Other_objects/spear.gif)";
+	spear.style.background = "url(/img/Other_objects/spear.gif)";
 	mooving_spear();
 }
 

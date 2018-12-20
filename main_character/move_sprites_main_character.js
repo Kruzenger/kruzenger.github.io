@@ -429,7 +429,6 @@ function Stamina_fulling(){
 
 function am_I_alive(){
 	if (Health.value <= 0) {
-		location.reload();
 	}
 	setTimeout(am_I_alive, 50);
 }

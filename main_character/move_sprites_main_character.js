@@ -490,7 +490,7 @@ function I_am_dead(){
 		if (deadly_me_right_X == 2150) {
 			main_character.style.top = '160px';
 			deadly_me_right_X = 1250;
-			setTimeout(function(){location.reload; }, 3000);
+			setTimeout(function(){location.reload(); }, 3000);
 		}
 		else{
 			deadly_me_right_X += 150;
@@ -504,7 +504,7 @@ function I_am_dead(){
 		if (deadly_me_left_X == 200) {
 			main_character.style.top = '160px';
 			deadly_me_left_X = 1100;
-			setTimeout(function(){location.reload; }, 3000);
+			setTimeout(function(){location.reload(); }, 3000);
 		}
 		else{
 			deadly_me_left_X -= 150;

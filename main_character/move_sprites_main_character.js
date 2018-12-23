@@ -2,6 +2,65 @@
 
 
 
+var main_character = document.getElementById('main_character');
+var BG = document.getElementById('BG');
+var Stamina = document.getElementById('Stamina_bar');
+var Health = document.getElementById('HP_bar');
+var game = document.getElementById('Game');
+
+var cadr_wight_right = 1250;
+const cadr_height_right = 0;
+var cadr_wight_left = 1100;
+const cadr_height_left = 0;
+
+var cadr_wight_stay_right = 1250;
+var cadr_wight_stay_left = 350;
+const cadr_height_stay = 150;
+
+var cadr_charge_wight_right = 1250;
+const cadr_charge_height_right = 300;
+var cadr_charge_wight_left = 1000;
+const cadr_charge_height_left = 300;
+
+var	Xposition = -250;
+var side = 1;
+var stay_player = 1;
+
+var cadr_wight_right_sheld = 2150;
+var cadr_wight_left_sheld = 200;
+const cadr_sheld_height = 150;
+
+var cadr_hit_width_right = 1250;
+var cadr_hit_width_left = 1100;
+const cadr_hit_height = 450;
+
+var my_pain_right_X = 1250;
+var my_pain_left_X = 1100;
+const my_pain_Y = 600;
+
+var deadly_me_right_X = 1250;
+var deadly_me_left_X = 1100;
+const deadly_me_Y = 750;
+
+var me_dead = 0;
+
+var BG_Xposition = 0;
+
+var Stamina = document.getElementById('Stamina_bar');
+var which_fun = 0;
+
+var Couldness = 1;
+var cooldown = 1;
+
+var shield_up = 0;
+
+var press = 0;
+
+var me_stun = 0;
+
+
+
+
 
 
 is_moob_alive1();
@@ -16,7 +75,6 @@ am_I_alive();
 
 Stamina_fulling();
 
-///////////////////////////////////////////////DESKTOP/////////////////////////////////////////////
 
 
 
@@ -25,76 +83,76 @@ Stamina_fulling();
 addEventListener("keydown", WAlking);
 
 function WAlking(e){
+	if (me_stun == 0 && me_dead == 0) {
 		switch(e.keyCode){
+         
        		case 65:    // если нажата клавиша A
-       			if (me_stun == OFF && me_dead == OFF) {
-       				stay_player = OFF;
-        			couldness = OFF;
-        			press = ON;
-        			side = LEFT;
-        			walk();
-          			break;
-				}
+       			stay_player = 0;
+        		Couldness = 0;
+        		press = 1;
+        		side = 0;
+        		walk();
+          		break;
+
        		case 68:  	// если нажата клавиша D
-       			if (me_stun == OFF && me_dead == OFF) {
-        			stay_player = OFF;
-        			couldness = OFF;
-        			press = ON;
-        			side = RIGHT; 
-           			walk();
-            		break;
-				}
+        		stay_player= 0;
+        		Couldness = 0;
+        		press = 1;
+        		side = 1; 
+           		walk();
+            	break;
+
         	case 16: 	// если нажата клавиша Shift
-        		if (Stamina_bar.value >= CHARGE_VALUE && couldness == ON && cooldown == OFF && me_stun == OFF && me_dead == OFF) {
-        			cooldown = ON;
- 					setTimeout(function(){cooldown = OFF;}, 650);
-        			press = ON;
-        			Stamina_bar.value -= CHARGE_VALUE;
+        		if (Stamina_bar.value >= 40 && Couldness == 1 && cooldown == 1) {
+        			cooldown = 0;
+ 					setTimeout(function(){cooldown = 1;}, 650);
+        			press = 1;
+        			Stamina_bar.value -= 40;
 					main_character.style.width = '250px';
         			charge();
         			break;
         		}
 
  			case 83:    // если нажата клавиша S
- 				if (me_stun == OFF && me_dead == OFF) {
- 					shield_up = ON;
- 					stay_player = ON;
- 					couldness = ON;
- 					press = ON;
- 					shield();
- 					break;
- 				}
+ 				shield_up = 1;
+ 				stay_player = 1;
+ 				Couldness = 1;
+ 				press = 1;
+ 				shield();
+ 				break;
+
  			case 81: 	// если нажата клавиша Q
- 				if (Stamina_bar.value >= HIT_VALUE && cooldown == OFF && me_stun == OFF && me_dead == OFF) {
- 					cooldown = ON;
- 					setTimeout(function(){cooldown = OFF;}, 500);
- 					press = ON;
- 					Stamina_bar.value -= HIT_VALUE; 
+ 				if (Stamina_bar.value >= 30 && cooldown == 1) {
+ 					cooldown = 0;
+ 					setTimeout(function(){cooldown = 1;}, 500);
+ 					press = 1;
+ 					Stamina_bar.value -= 30; 
  					hit();
  					break;
  				}
-
+ 		}
     }
 }
 
-addEventListener("keyup", pre_cheking_stay);
+addEventListener("keyup", function(){
+	stay_player = 1;
+	press = 0; 
+	shield_up = 0;
+	Couldness = 1; 
+	setTimeout(check_staying, 400)
+});
 
-function pre_cheking_stay(){
-	cadr_right_X = STANDART_FIRST_CADR_RIGHT;
-	cadr_left_X = STANDART_FIRST_CADR_LEFT;
-	stay_player = ON;
-	press = OFF; 
-	shield_up = OFF;
-	couldness = ON; 
-	if (me_dead == OFF) {
-		setTimeout(check_staying, 400)
+function check_staying(){
+	if (press == 1) {
+	
+	}
+	else{
+		staying();
 	}
 }
 
-function check_staying(){
-	if (press == OFF) {
-		stay_here();
-	}
+function staying(){
+	stay_here();
 }
 
 function repmake_150px(){
@@ -103,10 +161,12 @@ function repmake_150px(){
 
 function stay_here(){
 	repmake_150px();
+	cadr_wight_right = 1250;
+	cadr_wight_left = 1100;
 
-	sheld = OFF;
+	sheld = 0;
 
-	if (side == RIGHT) {
+	if (side == 1) {
 		main_character.style.backgroundPositionX = '-' + cadr_wight_stay_right + 'px';
 		main_character.style.backgroundPositionY = '-' + cadr_height_stay + 'px';
 	}
@@ -117,49 +177,46 @@ function stay_here(){
 }
 
 function walk(){
-	if (side == RIGHT) {
-		main_character.style.backgroundPositionX = '-' + cadr_right_X + 'px';
-		main_character.style.backgroundPositionY = '-' + cadr_height + 'px';
-
+	if (side == 1) {
+		main_character.style.backgroundPositionX = '-' + cadr_wight_right + 'px';
+		main_character.style.backgroundPositionY = '-' + cadr_height_right + 'px';
 
 		if (Xposition >= 100) {
-			BG_Xposition -= 12;	  //px
-			if (((enemy_position1 - Xposition) > -20 && (enemy_position1 - Xposition) < 0) || enemy_atack1 == OFF || enemy_side1 == LEFT) {    	// all numbers is in px
-				enemy_position1 -= 12;	 //px
+			BG_Xposition -= 12;
+			if (((enemy_position1 - Xposition) > -20 && (enemy_position1 - Xposition) < 0) || enemy_atack1 == 0 || enemy_side1 == 0) {
+				enemy_position1 -= 12;
 				enemy1.style.left = enemy_position1 + 'px';
 			}
-			if (((enemy_position2 - Xposition) > -20 && (enemy_position2 - Xposition) < 0) || enemy_atack2 == OFF || enemy_side2 == LEFT) {	   	// all numbers is in px
-				enemy_position2 -= 12;	 //px
+			if (((enemy_position2 - Xposition) > -20 && (enemy_position2 - Xposition) < 0) || enemy_atack2 == 0 || enemy_side2 == 0) {
+				enemy_position2 -= 12;
 				enemy2.style.left = enemy_position2 + 'px';
 			}
 			BG.style.backgroundPositionX = BG_Xposition + 'px';
 		}
 		else{
-			Xposition += 15;	//px
+			Xposition += 15;
 			main_character.style.left = Xposition + 'px';
 		}
 
-
-		if (cadr_right_X == 2300) {
-			cadr_right_X = STANDART_FIRST_CADR_RIGHT;
+		if (cadr_wight_right == 2300) {
+			cadr_wight_right = 1250;
 		}
 		else{
-			cadr_right_X += CADR;
+			cadr_wight_right += 150;
 		}
-		side = RIGHT;
+		side = 1;
 	}
 	else{
-		main_character.style.backgroundPositionX = '-' + cadr_left_X + 'px';
-		main_character.style.backgroundPositionY = '-' + cadr_height + 'px';
-
+		main_character.style.backgroundPositionX = '-' + cadr_wight_left + 'px';
+		main_character.style.backgroundPositionY = '-' + cadr_height_left + 'px';
 
 		if (Xposition <= -350) {
 			BG_Xposition += 12;
-			if (((enemy_position1 - Xposition) < 20 && (enemy_position1 - Xposition) > 0) || enemy_atack1 == OFF || enemy_side1 == RIGHT) {		// all numbers is in px
+			if (((enemy_position1 - Xposition) < 20 && (enemy_position1 - Xposition) > 0) || enemy_atack1 == 0 || enemy_side1 == 1) {
 				enemy_position1 += 12;
 				enemy1.style.left = enemy_position1 + 'px';
 			}
-			if (((enemy_position2 - Xposition) < 20 && (enemy_position2 - Xposition) > 0) || enemy_atack2 == OFF || enemy_side2 == RIGHT) {		// all numbers is in px
+			if (((enemy_position2 - Xposition) < 20 && (enemy_position2 - Xposition) > 0) || enemy_atack2 == 0 || enemy_side2 == 1) {
 				enemy_position2 += 12;
 				enemy2.style.left = enemy_position2 + 'px';
 			}
@@ -170,108 +227,109 @@ function walk(){
 			main_character.style.left = Xposition + 'px';
 		}
 
-		if (cadr_left_X == 50) {
-			cadr_left_X = STANDART_FIRST_CADR_LEFT;
+		if (cadr_wight_left == 50) {
+			cadr_wight_left = 1100;
 		}
 		else{
-			cadr_left_X -= CADR;
+			cadr_wight_left -= 150;
 		}
-		side = LEFT;
+		side = 0;
 	}
 }
 
 function charge(){
 
-	if (side == RIGHT) {
-
+	if (side == 1) {
 
 		main_character.style.backgroundPositionX = '-' + cadr_charge_wight_right + 'px';
-		main_character.style.backgroundPositionY = '-' + cadr_special_attack_height + 'px';
-
+		main_character.style.backgroundPositionY = '-' + cadr_charge_height_right + 'px';
 
 		if (Xposition >= 100) {
-			BG_Xposition -= 65; 	//px
-			enemy_position1 -= 65;		//px
-			enemy_position2 -= 65; 		//px
+			BG_Xposition -= 65;
+			enemy_position1 -= 65;
+			enemy_position2 -= 65;
 			enemy2.style.left = enemy_position2 + 'px';
 			enemy1.style.left = enemy_position1 + 'px';
 			BG.style.backgroundPositionX = BG_Xposition + 'px';
 		}
 		else{
-			Xposition += 65; 	//px
+			Xposition += 65;
 			main_character.style.left = Xposition + 'px';
 		}
 
-
 		if(cadr_charge_wight_right != 2250){
-			cadr_charge_wight_right += CADR_CHARGE;
+			cadr_charge_wight_right += 250;
 			setTimeout(charge, 50);
 		}
 		else{
-			if(enemy_side1 == RIGHT && (enemy_position1 - Xposition) >= -10 && (enemy_position1 - Xposition) <= 100) {		// all numbers is in px
-				enemy_atack1 = ON;
-				enemy_health_bar1.value -= DAMAGE;
+			if(enemy_side1 == 1 && (enemy_position1 - Xposition) >= -10 && (enemy_position1 - Xposition) <= 100){
+				enemy_atack1 = 1;
+				enemy_health_bar1.value -= 40;
 				enemy_pain1();
 			}
-			if (enemy_side2 == RIGHT && (enemy_position2 - Xposition) >= -10 && (enemy_position2 - Xposition) <= 100) {		// all numbers is in px
-				enemy_atack2 = ON;
-				enemy_health_bar2.value -= DAMAGE;
+			if (enemy_side2 == 1 && (enemy_position2 - Xposition) >= -10 && (enemy_position2 - Xposition) <= 100) {
+				enemy_atack2 = 1;
+				enemy_health_bar2.value -= 40;
 				enemy_pain2();
 			}
-			if (enemy_side1 == LEFT && (enemy_position1 - Xposition) >= -20 && (enemy_position1 - Xposition) <= 80) {		// all numbers is in px
-				enemy_health_bar1.value -= DAMAGE;
+			if (enemy_side1 == 0 && (enemy_position1 - Xposition) >= -20 && (enemy_position1 - Xposition) <= 80) {
+				enemy_atack1 = 1;
+				enemy_health_bar1.value -= 40;
 				enemy_pain1();
 			}
-			if (enemy_side2 == LEFT && (enemy_position2 - Xposition) >= -20 && (enemy_position2 - Xposition) <= 80) {		// all numbers is in px
-				enemy_health_bar2.value -= DAMAGE;
+			if (enemy_side2 == 0 && (enemy_position2 - Xposition) >= -20 && (enemy_position2 - Xposition) <= 80) {
+				enemy_atack2 = 1;
+				enemy_health_bar2.value -= 40;
 				enemy_pain2();
 			}
 
-			cadr_charge_wight_right = STANDART_FIRST_CADR_RIGHT;
 			setTimeout(repmake_150px, 50);
+			cadr_charge_wight_right = 1250;
 			setTimeout(stay_here, 50);
 		}
 	}
 	else{
 		main_character.style.backgroundPositionX = '-' + cadr_charge_wight_left + 'px';
-		main_character.style.backgroundPositionY = '-' + cadr_special_attack_height + 'px';
+		main_character.style.backgroundPositionY = '-' + cadr_charge_height_left + 'px';
 
 		if (Xposition <= -350) {
-			BG_Xposition += 65; 	//px
-			enemy_position1 += 65; 		//px
-			enemy_position2 += 65; 		//px
+			BG_Xposition += 65;
+			enemy_position1 += 65;
+			enemy_position2 += 65;
 			enemy2.style.left = enemy_position2 + 'px';
 			enemy1.style.left = enemy_position1 + 'px';
 			BG.style.backgroundPositionX = BG_Xposition + 'px';
 
 		}	
 		else{
-			Xposition -= 65; 	//px
+			Xposition -= 65;
 			main_character.style.left = Xposition + 'px';
 		}
 
 		if(cadr_charge_wight_left != 0){
-			cadr_charge_wight_left -= CADR_CHARGE;
+			cadr_charge_wight_left -= 250;
 			setTimeout(charge, 50);
 		}
 		else{
-			if(enemy_side1 == RIGHT && (enemy_position1 - Xposition) <= 10 && (enemy_position1 - Xposition) >= -100) {		// all numbers is in px
-				enemy_atack1 = ON;
-				enemy_health_bar1.value -= DAMAGE;
+			if(enemy_side1 == 0 && (enemy_position1 - Xposition) <= 10 && (enemy_position1 - Xposition) >= -100){
+				enemy_atack1 = 1;
+				enemy_health_bar1.value -= 40;
 				enemy_pain1();
 			}
-			if (enemy_side2 == LEFT && (enemy_position2 - Xposition) <= 10 && (enemy_position2 - Xposition) >= -100) {		// all numbers is in px
-				enemy_atack2 = ON;
-				enemy_health_bar2.value -= DAMAGE;
+			if (enemy_side2 == 0 && (enemy_position2 - Xposition) <= 10 && (enemy_position2 - Xposition) >= -100) {
+				enemy_atack2 = 1;
+				enemy_health_bar2.value -= 40;
 				enemy_pain2();
 			}
 			
-			if (enemy_side1 == RIGHT && (enemy_position1 - Xposition) <= 40 && (enemy_position1 - Xposition) >= -80) {		// all numbers is in px
-				enemy_health_bar1.value -= DAMAGE;
+			if (enemy_side1 == 1 && (enemy_position1 - Xposition) <= 40 && (enemy_position1 - Xposition) >= -80) {
+				enemy_atack1 = 1;
+				enemy_health_bar1.value -= 40;
 				enemy_pain1();
 			}
-			if (enemy_side1 == RIGHT && (enemy_position2 - Xposition) <= 40 && (enemy_position2 - Xposition) >= -80) {		// all numbers is in px
-				enemy_health_bar2.value -= DAMAGE;
+			if (enemy_side1 == 2 && (enemy_position2 - Xposition) <= 40 && (enemy_position2 - Xposition) >= -80) {
+				enemy_atack2 = 1;
+				enemy_health_bar2.value -= 40;
 				enemy_pain2();
 			}
 			setTimeout(repmake_150px, 50);
@@ -282,24 +340,24 @@ function charge(){
 }
 
 function shield(){
-	if (side == RIGHT) {
+	if (side == 1) {
 		main_character.style.backgroundPositionX = '-' + cadr_wight_right_sheld + 'px';
-		main_character.style.backgroundPositionY = '-' + cadr_height_stay + 'px';
+		main_character.style.backgroundPositionY = '-' + cadr_sheld_height + 'px';
 	}
 	else{
 		main_character.style.backgroundPositionX = '-' + cadr_wight_left_sheld + 'px';
-		main_character.style.backgroundPositionY = '-' + cadr_height_stay + 'px';
+		main_character.style.backgroundPositionY = '-' + cadr_sheld_height + 'px';
 	}
 }
 
 function hit(){
-	if (side == RIGHT) {
+	if (side == 1) {
 
 		main_character.style.backgroundPositionX = '-' + cadr_hit_width_right + 'px';
 		main_character.style.backgroundPositionY = '-' + cadr_hit_height + 'px';
 
 		if(cadr_hit_width_right < 1850){
-			cadr_hit_width_right += CADR;
+			cadr_hit_width_right += 150;
 			setTimeout(hit, 50);
 		}
 		else{
@@ -309,26 +367,28 @@ function hit(){
 				setTimeout(hit, 50);
 			}
 			else{
-				if(enemy_side1 == RIGHT && (enemy_position1 - Xposition) >= 0 && (enemy_position1 - Xposition) <= 100) {		// all numbers is in px
-					enemy_atack1 = ON;
-					enemy_health_bar1.value -= DAMAGE;
+				if(enemy_side1 == 1 && (enemy_position1 - Xposition) >= 0 && (enemy_position1 - Xposition) <= 100){
+					enemy_atack1 = 1;
+					enemy_health_bar1.value -= 40;
 					enemy_pain1();
 				}
-				if (enemy_side2 == RIGHT && (enemy_position2 - Xposition) >= 0 && (enemy_position2 - Xposition) <= 100) {		// all numbers is in px
-					enemy_atack2 = ON;
-					enemy_health_bar2.value -= DAMAGE;
+				if (enemy_side2 == 1 && (enemy_position2 - Xposition) >= 0 && (enemy_position2 - Xposition) <= 100) {
+					enemy_atack2 = 1;
+					enemy_health_bar2.value -= 40;
 					enemy_pain2();
 				}
-				if (enemy_side1 == LEFT && (enemy_position1 - Xposition) >= -20 && (enemy_position1 - Xposition) <= 60) {		// all numbers is in px
-					enemy_health_bar1.value -= DAMAGE;
+				if (enemy_side1 == 0 && (enemy_position1 - Xposition) >= -20 && (enemy_position1 - Xposition) <= 60) {
+					enemy_atack1 = 1;
+					enemy_health_bar1.value -= 40;
 					enemy_pain1();
 				}
-				if (enemy_side2 == LEFT && (enemy_position2 - Xposition) >= -20 && (enemy_position2 - Xposition) <= 60) {		// all numbers is in px
-					enemy_health_bar2.value -= DAMAGE;
+				if (enemy_side2 == 0 && (enemy_position2 - Xposition) >= -20 && (enemy_position2 - Xposition) <= 60) {
+					enemy_atack2 = 1;
+					enemy_health_bar2.value -= 40;
 					enemy_pain2();
 				}
 				setTimeout(repmake_150px, 150);
-				cadr_hit_width_right = STANDART_FIRST_CADR_RIGHT;
+				cadr_hit_width_right = 1250;
 				setTimeout(stay_here, 150);
 			}
 		}
@@ -338,38 +398,40 @@ function hit(){
 		main_character.style.backgroundPositionY = '-' + cadr_hit_height + 'px';
 
 		if (cadr_hit_width_left > 500) {
-			cadr_hit_width_left -= CADR;
+			cadr_hit_width_left -= 150;
 			setTimeout(hit, 50);
 		}
 		else{
 			if(cadr_hit_width_left > 100 && cadr_hit_width_left < 500){
 				main_character.style.width = '200px';
-				cadr_hit_width_left -= CADR_HIT;
+				cadr_hit_width_left -= 200;
 				setTimeout(hit, 50);
 			}
 			else{
-				if(enemy_side1 == LEFT && (enemy_position1 - Xposition) <= 0 && (enemy_position1 - Xposition) >= -80) {		// all numbers is in px
-					enemy_atack1 = ON;
-					enemy_health_bar1.value -= DAMAGE;
+				if(enemy_side1 == 0 && (enemy_position1 - Xposition) <= 0 && (enemy_position1 - Xposition) >= -80){
+					enemy_atack1 = 1;
+					enemy_health_bar1.value -= 40;
 					enemy_pain1();
 				}
-				if (enemy_side2 == LEFT && (enemy_position2 - Xposition) <= 0 && (enemy_position2 - Xposition) >= -80) {	 // all numbers is in px
-					enemy_atack2 = ON;
-					enemy_health_bar2.value -= DAMAGE;
+				if (enemy_side2 == 0 && (enemy_position2 - Xposition) <= 0 && (enemy_position2 - Xposition) >= -80) {
+					enemy_atack2 = 1;
+					enemy_health_bar2.value -= 40;
 					enemy_pain2();
 				}
 				
-				if (enemy_side1 == RIGHT && (enemy_position1 - Xposition) <= 20 && (enemy_position1 - Xposition) >= -60) {		// all numbers is in px
-					enemy_health_bar1.value -= DAMAGE;
+				if (enemy_side1 == 1 && (enemy_position1 - Xposition) <= 20 && (enemy_position1 - Xposition) >= -60) {
+					enemy_atack1 = 1;
+					enemy_health_bar1.value -= 40;
 					enemy_pain1();
 				}
-				if (enemy_side2 == RIGHT && (enemy_position2 - Xposition) <= 20 && (enemy_position2 - Xposition) >= -60) {		// all numbers is in px
-					enemy_health_bar2.value -= DAMAGE;
+				if (enemy_side2 == 1 && (enemy_position2 - Xposition) <= 20 && (enemy_position2 - Xposition) >= -60) {
+					enemy_atack2 = 1;
+					enemy_health_bar2.value -= 40;
 					enemy_pain2();
 				}
 				
 				setTimeout(repmake_150px, 150);
-				cadr_hit_width_left = STANDART_FIRST_CADR_LEFT;
+				cadr_hit_width_left = 1100;
 				setTimeout(stay_here, 150);
 			}
 		}
@@ -377,32 +439,30 @@ function hit(){
 }
 
 function my_pain(){
-	me_stun = ON;
-	if(side == RIGHT){
-		main_character.style.backgroundPositionX = '-' + cadr_pain_right_X + 'px';
-		main_character.style.backgroundPositionY = '-' + pain_Y + 'px';
+	me_stun = 1;
+	if(side == 1){
+		main_character.style.backgroundPositionX = '-' + my_pain_right_X + 'px';
+		main_character.style.backgroundPositionY = '-' + my_pain_Y + 'px';
 
-		if (cadr_pain_right_X == 1550) {
-			cadr_pain_right_X = STANDART_FIRST_CADR_RIGHT;
-			me_stun = OFF;
-
+		if (my_pain_right_X == 1550) {
+			my_pain_right_X = 1250;
+			me_stun = 0;
 		}
 		else{
-			cadr_pain_right_X += CADR;
+			my_pain_right_X += 150;
 			setTimeout(my_pain, 100); 
 		}
 	}
 	else{
-		main_character.style.backgroundPositionX = '-' + cadr_pain_left_X + 'px';
-		main_character.style.backgroundPositionY = '-' + pain_Y + 'px';
+		main_character.style.backgroundPositionX = '-' + my_pain_left_X + 'px';
+		main_character.style.backgroundPositionY = '-' + my_pain_Y + 'px';
 
-		if (cadr_pain_left_X == 800) {
-			cadr_pain_left_X = STANDART_FIRST_CADR_LEFT;
-			me_stun = OFF;
-			pre_cheking_stay();
+		if (my_pain_left_X == 800) {
+			my_pain_left_X = 1100;
+			me_stun = 0;
 		}
 		else{
-			cadr_pain_left_X -= CADR;
+			my_pain_left_X -= 150;
 			setTimeout(my_pain, 100); 
 		}
 	}
@@ -417,7 +477,6 @@ function Stamina_fulling(){
 
 function am_I_alive(){
 	if (Health.value <= 0) {
-		me_dead = ON;
 		I_am_dead();
 	}
 	else{
@@ -426,29 +485,61 @@ function am_I_alive(){
 }
 
 function I_am_dead(){
-	if (side == RIGHT) {
-		main_character.style.backgroundPositionX = '-' + cadr_dead_right_X + 'px';
-		main_character.style.backgroundPositionY = '-' + deadly_Y + 'px';
+	me_dead = 1;
+	if (side == 1) {
+		main_character.style.backgroundPositionX = '-' + deadly_me_right_X + 'px';
+		main_character.style.backgroundPositionY = '-' + deadly_me_Y + 'px';
 
-		if (cadr_dead_right_X == 2150) {
-			cadr_dead_right_X = STANDART_FIRST_CADR_RIGHT;
+		if (deadly_me_right_X == 2150) {
+			deadly_me_right_X = 1250;
 			location.reload();
 		}
 		else{
-			cadr_dead_right_X += CADR;
+			deadly_me_right_X += 150;
 			setTimeout(I_am_dead, 100);
 		}
 	}
 	else{
-		main_character.style.backgroundPositionX = '-' + cadr_dead_right_X + 'px';
-		main_character.style.backgroundPositionY = '-' + deadly_Y + 'px';
+		main_character.style.backgroundPositionX = '-' + deadly_me_left_X + 'px';
+		main_character.style.backgroundPositionY = '-' + deadly_me_Y + 'px';
 
-		if (cadr_dead_right_X == 200) {
-			cadr_dead_right_X = STANDART_FIRST_CADR_LEFT;
+		if (deadly_me_left_X == 200) {
+			deadly_me_left_X = 1100;
 		}
 		else{
-			cadr_dead_right_X -= CADR;
+			deadly_me_left_X -= 150;
 			setTimeout(I_am_dead, 100);
 		}
 	}
+}
+
+
+var skip = document.getElementById('skip');
+var next = document.getElementById('next');
+var images = document.getElementById('history_img');
+var number_next = 0;
+
+
+next.onclick = function(){
+
+	if (number_next == 0){
+	images.src = "../img/history_2.jpg";
+	number_next++;}
+	else{
+	images.src = "../img/history_3.jpg";
+	number_next++;
+		if(number_next == 3){
+			next.style.display = 'none';
+			images.style.display = 'none';
+			skip.style.display = 'none';
+		}
+	}
+
+}
+
+
+skip.onclick = function(){
+	next.style.display = 'none';
+	images.style.display = 'none';
+	this.style.display = 'none';
 }

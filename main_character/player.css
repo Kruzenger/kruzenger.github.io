@@ -1,10 +1,9 @@
 
 	#BG{
 		overflow: hidden;
-		background: url(/img/environment_forestbackground.gif);
+		background: url(../img/environment_forestbackground.gif);
 		height: 600px; 
 		width: 1200px;
-		margin-top: 10px;
 	}
 
 	#All{
@@ -22,7 +21,7 @@
 /*////////////////////////////////////////////////////////////////*/
 
 	#main_character{
-        background-image: url(/img/Stay_&_walk_&_charge.gif);
+        background-image: url(../img/Stay_&_walk_&_charge.gif);
         height: 150px;
         width: 150px;
         top: 145px;
@@ -48,7 +47,7 @@
 /*////////////////////////////////////////////////////////////////*/
 
 	#enemy1{
-    	background-image: url(/img/Moob_sprite_V1.gif);
+    	background-image: url(../img/Moob_sprite_V1.gif);
     	display: flex;
     	height: 150px;
     	width: 150px;
@@ -66,7 +65,7 @@
 	}
 
 	#spear1{
-		background: url(/img/spear.gif);
+		background: url(../img/spear.gif);
 		height: 15px;
 		width: 100px;
 		left: -1100px;
@@ -74,7 +73,7 @@
 	}
 
 	#spear2{
-		background: url(/img/spear.gif);
+		background: url(../img/spear.gif);
 		height: 15px;
 		width: 100px;
 		left: -1100px;
@@ -82,7 +81,7 @@
 	}
 
 	#enemy2{
-		background-image: url(/img/Moob_sprite_V1.gif);
+		background-image: url(../img/Moob_sprite_V1.gif);
     	display: flex;
     	height: 150px;
     	width: 150px;
@@ -99,9 +98,56 @@
     	width: 120px;
 	}
 
-	.mobile_object{
-		display: none;
-		position: absolute;
-	}
-
 /*////////////////////////////////////////////////////////////////*/
+
+.before_game{
+    width: 100px;   
+    height: 1920px; 
+}
+
+.history{
+    left: 10%;
+    display: flex;
+    z-index: 9999;
+    width: 1200px;
+    height: 700px;
+    position: absolute;
+    margin-top: -50px;
+}
+
+.history img{
+    width: 1500px;
+    height: 800px;
+}
+
+#next{
+    background-color: #000;
+    opacity: .8;
+    cursor: pointer;
+    position: absolute;
+    color: #aaa;
+    height: 50px;
+    width: 300px;
+    right: -25%;
+    bottom: 50%;
+}
+
+#skip{
+    background-color: #000;
+    opacity: .8;
+    cursor: pointer;
+    position: absolute;
+    color: #aaa;
+    height: 50px;
+    width: 300px;
+    right: -25%;
+    bottom: -13%;
+}
+
+#skip:hover{
+    color: #fff;
+}
+
+#next:hover{
+    color: #fff;
+}

@@ -9,7 +9,7 @@ function write_taxt_window(){
 }
 
 function teach_walking() {
-	if (counter < teaching_walk_right_and_left.length) {
+	if (counter < teaching_walk_right_and_left.length && frase_N2 == OFF) {
     	txt.innerHTML += teaching_walk_right_and_left.charAt(counter);
     	counter++;
    		setTimeout(teach_walking, speed);

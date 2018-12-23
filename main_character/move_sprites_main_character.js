@@ -44,7 +44,6 @@ function left_run_mobile(){
 		if(run_or_not_mobile_left == ON){
 			side = LEFT;
 			stay_player = OFF;
-    		couldness = OFF;
 			walk();
 			setTimeout(left_run_mobile, 50);
 		}
@@ -64,7 +63,6 @@ function remake_mobile_run_right(){
 	else{
 		run_or_not_mobile_right = OFF;
 	}
-	console.log(run_or_not_mobile_right);
 	right_run_mobile();
 }
 
@@ -73,7 +71,6 @@ function right_run_mobile(){
 		if(run_or_not_mobile_right == ON){
 			side = RIGHT;
 			stay_player = OFF;
-    		couldness = OFF;
 			walk();
 			setTimeout(right_run_mobile, 50);
 		}
@@ -132,7 +129,7 @@ function charge_mobile(){
 	shield_up_mobile = OFF;
 	if (Stamina_bar.value >= CHARGE_VALUE && couldness == ON && cooldown == OFF && me_stun == OFF && me_dead == OFF) {
 		cooldown = ON;
- 		setTimeout(function(){cooldown = OFF;}, 650);
+ 		setTimeout(function(){cooldown = OFF;}, 500);
         Stamina_bar.value -= CHARGE_VALUE;
 		main_character.style.width = '250px';
 		charge();

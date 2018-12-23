@@ -188,7 +188,7 @@ function atack2(){
 
 		if (enemy_atack_left_X2 <= 350) {
 			enemy_atack_left_X2 = STANDART_FIRST_CADR_LEFT;
-			if (shield_up == 0) {
+			if (shield_up == OFF) {
 				Health.value -= DAMAGE;
 				if (Health.value > 0) {
 					my_pain();

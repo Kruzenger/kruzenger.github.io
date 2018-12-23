@@ -1,0 +1,58 @@
+
+
+@media only screen and (max-width: 1200px){
+	#All{
+		margin-top: 25px;
+	}
+
+	#BG{
+		margin-top: 0px;
+		height: 500px;
+		width: 1000px;
+	}
+
+	.mobile_object{
+		position: relative;
+		display: block;
+	}
+
+	#left_but{
+		left: 20px;
+		top: 20px;
+		background: url(/home/stas/Downloads/Programing/BUHF/textures/Other_objects/left.gif);
+		height: 100px;
+		width: 100px;
+	}
+
+	#shield_but{
+		left: 135px;
+		top: -80px;
+		background: url(/home/stas/Downloads/Programing/BUHF/textures/Other_objects/shield_mobile.gif);
+		height: 100px;
+		width: 100px;
+	}
+
+	#right_but{
+		left: 250px;
+		top: -180px;
+		background: url(/home/stas/Downloads/Programing/BUHF/textures/Other_objects/right.gif);
+		height: 100px;
+		width: 100px;
+	}
+
+	#hit_but{
+		left: 365px;
+		top: -280px;
+		background: url(/home/stas/Downloads/Programing/BUHF/textures/Other_objects/sword.gif);
+		height: 100px;
+		width: 100px;
+	}
+
+	#charge_but{
+		left: 480px;
+		top: -380px;
+		background: url(/home/stas/Downloads/Programing/BUHF/textures/Other_objects/charge_mobile.gif);
+		height: 100px;
+		width: 100px;
+	}
+}

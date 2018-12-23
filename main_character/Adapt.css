@@ -39,7 +39,7 @@
 	}
 
 	#hit_but{
-		left: 365px;
+		left: 565px;
 		top: -280px;
 		background: url(/img/sword.gif);
 		height: 100px;
@@ -47,7 +47,7 @@
 	}
 
 	#charge_but{
-		left: 480px;
+		left: 680px;
 		top: -380px;
 		background: url(/img/charge_mobile.gif);
 		height: 100px;

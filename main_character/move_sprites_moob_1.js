@@ -171,7 +171,7 @@ function atack1(){
 					my_pain();
 				}
 			}
-			setTimeout(function(){atacking1 = ON;}, 1000);
+			setTimeout(function(){atacking1 = ON;}, 1500);
 		}
 		else{
 			enemy_atack_right_X1 += CADR;
@@ -190,7 +190,7 @@ function atack1(){
 					my_pain();
 				}
 			}
-			setTimeout(function(){atacking1 = ON;}, 1000);	
+			setTimeout(function(){atacking1 = ON;}, 1500);	
 		}
 		else{
 			enemy_atack_left_X1 -= CADR;
@@ -270,7 +270,7 @@ function mooving_spear1(){
 					my_pain();
 				}
 			}
-			setTimeout(function(){throwing1 = ON}, 750);
+			setTimeout(function(){throwing1 = ON}, 1000);
 			spear1.style.left = '-1100px';
 		}
 	}
@@ -288,7 +288,7 @@ function mooving_spear1(){
 					my_pain();
 				}
 			}
-			setTimeout(function(){throwing1 = ON}, 750);
+			setTimeout(function(){throwing1 = ON}, 1000);
 			spear1.style.left = '-1100px';
 		}
 	}	

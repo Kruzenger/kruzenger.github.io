@@ -25,13 +25,6 @@ const deadly_Y = 750;
 
 
 
-
-
-var run_or_not_mobile_left = OFF;
-var run_or_not_mobile_right = OFF;
-var shield_up_mobile = OFF;
-
-
 //////////////////////////////////////////////////
 
 
@@ -150,9 +143,3 @@ var spear1 = document.getElementById('spear1');
 var enemy2 = document.getElementById('enemy2');
 var enemy_health_bar2 = document.getElementById('Health_of_enemy2');
 var spear2 = document.getElementById('spear2');
-
-var left_but = document.getElementById('left_but');
-var right_but = document.getElementById('right_but');
-var shield_but = document.getElementById('shield_but');
-var hit_but = document.getElementById('hit_but');
-var charge_but = document.getElementById('charge_but');

@@ -1,6 +1,10 @@
 
 
 @media only screen and (max-width: 1200px){
+    	#HP_bar{
+    		margin-top: 200px;
+    	}
+	
 	#All{
 		margin-top: 25px;
 	}
@@ -39,7 +43,7 @@
 	}
 
 	#hit_but{
-		left: 565px;
+		left: 665px;
 		top: -280px;
 		background: url(/img/sword.gif);
 		height: 100px;
@@ -47,7 +51,7 @@
 	}
 
 	#charge_but{
-		left: 680px;
+		left: 780px;
 		top: -380px;
 		background: url(/img/charge_mobile.gif);
 		height: 100px;

@@ -19,7 +19,7 @@
 	#left_but{
 		left: 20px;
 		top: 20px;
-		background: url(/home/stas/Downloads/Programing/BUHF/textures/Other_objects/left.gif);
+		background: url(/img/left.gif);
 		height: 100px;
 		width: 100px;
 	}
@@ -27,7 +27,7 @@
 	#shield_but{
 		left: 135px;
 		top: -80px;
-		background: url(/home/stas/Downloads/Programing/BUHF/textures/Other_objects/shield_mobile.gif);
+		background: url(/img/shield_mobile.gif);
 		height: 100px;
 		width: 100px;
 	}
@@ -35,7 +35,7 @@
 	#right_but{
 		left: 250px;
 		top: -180px;
-		background: url(/home/stas/Downloads/Programing/BUHF/textures/Other_objects/right.gif);
+		background: url(/img/right.gif);
 		height: 100px;
 		width: 100px;
 	}
@@ -43,7 +43,7 @@
 	#hit_but{
 		left: 365px;
 		top: -280px;
-		background: url(/home/stas/Downloads/Programing/BUHF/textures/Other_objects/sword.gif);
+		background: url(/img/sword.gif);
 		height: 100px;
 		width: 100px;
 	}
@@ -51,7 +51,7 @@
 	#charge_but{
 		left: 480px;
 		top: -380px;
-		background: url(/home/stas/Downloads/Programing/BUHF/textures/Other_objects/charge_mobile.gif);
+		background: url(/img/charge_mobile.gif);
 		height: 100px;
 		width: 100px;
 	}

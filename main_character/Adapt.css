@@ -17,6 +17,11 @@
 	#BG{
 		margin-top: 0px;
 	}
+	
+	#Game{
+		position: relative;
+		top: - 150px;
+	}
 
 	.mobile_object{
 		position: relative;

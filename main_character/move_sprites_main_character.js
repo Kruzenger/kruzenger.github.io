@@ -270,20 +270,24 @@ function charge(){
 				enemy_atack1 = ON;
 				enemy_health_bar1.value -= DAMAGE;
 				enemy_pain1();
+				sound_after_s_attack();
 			}
 			if (enemy_side2 == LEFT && (enemy_position2 - Xposition) <= 10 && (enemy_position2 - Xposition) >= -100) {		// all numbers is in px
 				enemy_atack2 = ON;
 				enemy_health_bar2.value -= DAMAGE;
 				enemy_pain2();
+				sound_after_s_attack();
 			}
 			
 			if (enemy_side1 == RIGHT && (enemy_position1 - Xposition) <= 40 && (enemy_position1 - Xposition) >= -80) {		// all numbers is in px
 				enemy_health_bar1.value -= DAMAGE;
 				enemy_pain1();
+				sound_after_s_attack();
 			}
 			if (enemy_side1 == RIGHT && (enemy_position2 - Xposition) <= 40 && (enemy_position2 - Xposition) >= -80) {		// all numbers is in px
 				enemy_health_bar2.value -= DAMAGE;
 				enemy_pain2();
+				sound_after_s_attack();
 			}
 			setTimeout(repmake_150px, 50);
 			cadr_charge_wight_left = 1000;
@@ -311,7 +315,9 @@ function hit(){
 
 		if(cadr_hit_width_right < 1850){
 			cadr_hit_width_right += CADR;
+			sound_after_attack();
 			setTimeout(hit, 50);
+
 		}
 		else{
 			if (cadr_hit_width_right < 2050) {
@@ -323,19 +329,24 @@ function hit(){
 				if(enemy_side1 == RIGHT && (enemy_position1 - Xposition) >= 0 && (enemy_position1 - Xposition) <= 100) {		// all numbers is in px
 					enemy_atack1 = ON;
 					enemy_health_bar1.value -= DAMAGE;
+					sound_after_s_attack();
 					enemy_pain1();
+
 				}
 				if (enemy_side2 == RIGHT && (enemy_position2 - Xposition) >= 0 && (enemy_position2 - Xposition) <= 100) {		// all numbers is in px
 					enemy_atack2 = ON;
 					enemy_health_bar2.value -= DAMAGE;
+					sound_after_s_attack();
 					enemy_pain2();
 				}
 				if (enemy_side1 == LEFT && (enemy_position1 - Xposition) >= -20 && (enemy_position1 - Xposition) <= 60) {		// all numbers is in px
 					enemy_health_bar1.value -= DAMAGE;
+					sound_after_s_attack();
 					enemy_pain1();
 				}
 				if (enemy_side2 == LEFT && (enemy_position2 - Xposition) >= -20 && (enemy_position2 - Xposition) <= 60) {		// all numbers is in px
 					enemy_health_bar2.value -= DAMAGE;
+					sound_after_s_attack();
 					enemy_pain2();
 				}
 				setTimeout(repmake_150px, 150);
@@ -350,6 +361,7 @@ function hit(){
 
 		if (cadr_hit_width_left > 500) {
 			cadr_hit_width_left -= CADR;
+			sound_after_attack();
 			setTimeout(hit, 50);
 		}
 		else{
@@ -363,11 +375,13 @@ function hit(){
 					enemy_atack1 = ON;
 					enemy_health_bar1.value -= DAMAGE;
 					enemy_pain1();
+					sound_after_s_attack();
 				}
 				if (enemy_side2 == LEFT && (enemy_position2 - Xposition) <= 0 && (enemy_position2 - Xposition) >= -80) {	 // all numbers is in px
 					enemy_atack2 = ON;
 					enemy_health_bar2.value -= DAMAGE;
 					enemy_pain2();
+					sound_after_s_attack();
 				}
 				
 				if (enemy_side1 == RIGHT && (enemy_position1 - Xposition) <= 20 && (enemy_position1 - Xposition) >= -60) {		// all numbers is in px
@@ -377,6 +391,7 @@ function hit(){
 				if (enemy_side2 == RIGHT && (enemy_position2 - Xposition) <= 20 && (enemy_position2 - Xposition) >= -60) {		// all numbers is in px
 					enemy_health_bar2.value -= DAMAGE;
 					enemy_pain2();
+					sound_after_s_attack();
 				}
 				
 				setTimeout(repmake_150px, 150);

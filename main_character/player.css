@@ -1,0 +1,203 @@
+
+	#BG{
+		overflow: hidden;
+		background: url(/home/stas/Downloads/Programing/BUHF/textures/BG/environment_forestbackground.gif);
+		height: 600px; 
+		width: 1200px;
+		margin-top: 10px;
+	}
+
+	#All{
+		margin-top: 100px;
+	}
+
+	#Game{
+		height: 300px;
+	}
+
+	#Game .objects{
+		position: relative;
+		margin-top: 200px;
+	}
+
+	#field_for_text{
+		position: relative;
+		left: 150px;
+		top: -550px;
+		width: 700px;
+		height: 50px;
+		background: #ffffffb3;
+		transition: opacity 3s, visibility 0s linear 0.3s;
+		opacity: 0;
+		border-radius: 20px;
+	}
+
+	#txt{
+		position: relative;
+		top: -610px;
+		left: 160px;
+		width: 600px;
+	}
+/*////////////////////////////////////////////////////////////////*/
+
+	#main_character{
+        background-image: url(/home/stas/Downloads/Programing/BUHF/textures/characters_spright/Stay_&_walk_&_charge.gif);
+        height: 150px;
+        width: 150px;
+        top: 145px;
+        left: 0px;
+        z-index: 1000;
+        background-position-x: -1250px; 
+        background-position-y: -150px;
+    }
+
+    #Stamina_bar{
+    	width: 200px;
+    	height: 15px;
+    	margin-right: 750px; 
+    }
+
+    #HP_bar{
+    	margin-top: 20px;
+    	width: 200px;
+    	height: 15px;
+    	margin-right: 750px;
+    }
+
+/*////////////////////////////////////////////////////////////////*/
+
+	#enemy1{
+    	background-image: url(/home/stas/Downloads/Programing/BUHF/textures/Moobs/Moob_sprite_V1.gif);
+    	display: flex;
+    	height: 150px;
+    	width: 150px;
+    	top: -200px;
+    	left: 1500px;
+    	background-position-x: -1250px;
+    	background-position-y: -150px;
+  		transition: opacity 3s, visibility 0s linear 0.3s;
+	}
+
+	#Health_of_enemy1{
+		top: -190px;
+    	height: 10px;
+    	width: 120px;
+
+	}
+
+	#spear1{
+		background: url(/home/stas/Downloads/Programing/BUHF/textures/Other_objects/spear.gif);
+		height: 15px;
+		width: 100px;
+		left: -1100px;
+		bottom: 830px;
+	}
+
+	#spear2{
+		background: url(/home/stas/Downloads/Programing/BUHF/textures/Other_objects/spear.gif);
+		height: 15px;
+		width: 100px;
+		left: -1100px;
+		bottom: 1050px;
+	}
+
+	#enemy2{
+		background-image: url(/home/stas/Downloads/Programing/BUHF/textures/Moobs/Moob_sprite_V1.gif);
+    	display: flex;
+    	height: 150px;
+    	width: 150px;
+    	top: -550px;
+    	left: 4000px;
+    	background-position-x: -1250px;
+    	background-position-y: -150px;
+  		transition: opacity 3s, visibility 0s linear 0.3s;
+	}
+
+	#Health_of_enemy2{
+		top: -190px;
+    	height: 10px;
+    	width: 120px;
+	}
+
+	#NPC{
+		background: url(/home/stas/Downloads/Programing/BUHF/textures/Moobs/NPC.gif);
+		background-position-x: 1250px;
+		background-position-y: 150px;
+		height: 150px;
+		width: 150px;
+		bottom: 1332px; 
+		left: 300px;
+	}
+
+
+/*////////////////////////////////////////////////////////////////*/
+
+	.znak{
+		position: relative;
+		z-index: 100px;
+		left: -50px;
+		top: -50px;
+		height: 50px;
+		width: 24px;
+		background: url(/home/stas/Downloads/Programing/BUHF/textures/Other_objects/voskl.gif);
+	}	
+
+	#statement{
+		height: 60px;
+		width: 260px;
+		bottom: 1780px;
+		background: #ffffffb3;
+		transition: opacity 3s, visibility 0s linear 0.3s;
+		opacity: 0;
+		border-radius: 20px 20px 20px 0px;
+	}
+
+	#state{
+		width: 250px;
+	}
+
+	/*//////////////////////////////////////////////////////////////*/
+
+	#window{
+		width: 400px;
+		height: 500px;
+		background: url(/home/stas/Downloads/Programing/BUHF/textures/Interfase/Qestion.gif);
+		bottom: 2300px;
+		z-index: 10000;
+		transition: opacity 2s, visibility 0s linear 0.3s;
+		opacity: 0;
+	}
+
+	#darkness{
+		position: relative;
+		bottom: 555px;
+		width: 1200px;
+		height: 600px;
+		z-index: 9000;
+		transition: opacity 2s, visibility 0s linear 0.3s;
+		opacity: 0;
+		background: #171414b3;
+	}
+
+	#Q_wind{
+		top: 120px;
+		width: 350px;
+		font-size: 15px;
+		color: red;
+	}
+
+	#OK{
+		background: url(/home/stas/Downloads/Programing/BUHF/textures/Interfase/Yes.gif);
+		width: 100px;
+		height: 36px;
+		left: -80px;
+		top: 80px;
+	}
+
+	#NO{
+		background: url(/home/stas/Downloads/Programing/BUHF/textures/Interfase/No.gif);
+		width: 100px;
+		height: 36px;
+		left: 80px;
+		bottom: 156px; 
+	}

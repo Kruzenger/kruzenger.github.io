@@ -1,7 +1,7 @@
 
 	#BG{
 		overflow: hidden;
-		background: url(/home/stas/Downloads/Programing/BUHF/textures/BG/environment_forestbackground.gif);
+		background: url(../img/environment_forestbackground.gif);
 		height: 600px; 
 		width: 1200px;
 		margin-top: 10px;
@@ -41,7 +41,7 @@
 /*////////////////////////////////////////////////////////////////*/
 
 	#main_character{
-        background-image: url(/home/stas/Downloads/Programing/BUHF/textures/characters_spright/Stay_&_walk_&_charge.gif);
+        background-image: url(../img/Stay_&_walk_&_charge.gif);
         height: 150px;
         width: 150px;
         top: 145px;
@@ -67,7 +67,7 @@
 /*////////////////////////////////////////////////////////////////*/
 
 	#enemy1{
-    	background-image: url(/home/stas/Downloads/Programing/BUHF/textures/Moobs/Moob_sprite_V1.gif);
+    	background-image: url(../img/Moob_sprite_V1.gif);
     	display: flex;
     	height: 150px;
     	width: 150px;
@@ -86,7 +86,7 @@
 	}
 
 	#spear1{
-		background: url(/home/stas/Downloads/Programing/BUHF/textures/Other_objects/spear.gif);
+		background: url(../img/spear.gif);
 		height: 15px;
 		width: 100px;
 		left: -1100px;
@@ -94,7 +94,7 @@
 	}
 
 	#spear2{
-		background: url(/home/stas/Downloads/Programing/BUHF/textures/Other_objects/spear.gif);
+		background: url(../img/spear.gif);
 		height: 15px;
 		width: 100px;
 		left: -1100px;
@@ -102,7 +102,7 @@
 	}
 
 	#enemy2{
-		background-image: url(/home/stas/Downloads/Programing/BUHF/textures/Moobs/Moob_sprite_V1.gif);
+		background-image: url(../img/Moob_sprite_V1.gif);
     	display: flex;
     	height: 150px;
     	width: 150px;
@@ -120,7 +120,7 @@
 	}
 
 	#NPC{
-		background: url(/home/stas/Downloads/Programing/BUHF/textures/Moobs/NPC.gif);
+		background: url(../img/NPC.gif);
 		background-position-x: 1250px;
 		background-position-y: 150px;
 		height: 150px;
@@ -132,15 +132,15 @@
 
 /*////////////////////////////////////////////////////////////////*/
 
-	.znak{
+	/*.znak{
 		position: relative;
 		z-index: 100px;
 		left: -50px;
 		top: -50px;
 		height: 50px;
 		width: 24px;
-		background: url(/home/stas/Downloads/Programing/BUHF/textures/Other_objects/voskl.gif);
-	}	
+		background: url(../img/voskl.gif);
+	}*/	
 
 	#statement{
 		height: 60px;
@@ -161,7 +161,7 @@
 	#window{
 		width: 400px;
 		height: 500px;
-		background: url(/home/stas/Downloads/Programing/BUHF/textures/Interfase/Qestion.gif);
+		background: url(../img/interfase/Qestion.gif);
 		bottom: 2300px;
 		z-index: 10000;
 		transition: opacity 2s, visibility 0s linear 0.3s;
@@ -187,7 +187,7 @@
 	}
 
 	#OK{
-		background: url(/home/stas/Downloads/Programing/BUHF/textures/Interfase/Yes.gif);
+		background: url(../img/interfase/Yes.gif);
 		width: 100px;
 		height: 36px;
 		left: -80px;
@@ -195,7 +195,7 @@
 	}
 
 	#NO{
-		background: url(/home/stas/Downloads/Programing/BUHF/textures/Interfase/No.gif);
+		background: url(../img/interfase/No.gif);
 		width: 100px;
 		height: 36px;
 		left: 80px;
@@ -203,7 +203,7 @@
 	}
 
 	.restart{
-		background: url(/home/stas/Downloads/Programing/BUHF/textures/Interfase/Restart.gif);
+		background: url(../img/interfase/Restart.gif);
 		width: 100px;
 		height: 36px;
 		position: relative;

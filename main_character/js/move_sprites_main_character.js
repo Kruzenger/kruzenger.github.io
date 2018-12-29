@@ -53,10 +53,10 @@ function WAlking(e){
         			me_run = ON;
         			run_left = ON;
         			run_right = OFF;
-        			if (play_or_not == OFF) {
+        			/*if (play_or_not == OFF) {
         				run_aud.play();
         				play_or_not = ON;
-        			}
+        			}*/
         			walk();
 				}
 				break;
@@ -69,10 +69,10 @@ function WAlking(e){
         			side = RIGHT; 
         			run_right = ON;
         			run_left = OFF;
-        			if (play_or_not == OFF) {
+        			/*if (play_or_not == OFF) {
         				run_aud.play();
         				play_or_not = ON;
-        			}
+        			}*/
            			walk();  
 				}
 				break;
@@ -118,7 +118,7 @@ function WAlking(e){
  					me_stun = ON;
  					setTimeout(function(){cooldown = OFF;}, 500);
  					press = ON;
- 					hit_aud.play();
+ 					//hit_aud.play();
  					Stamina_bar.value -= HIT_VALUE; 
  					hit();
  				}
@@ -339,7 +339,7 @@ function hit(){
 				}
 				setTimeout(repmake_150px, 150);
 				cadr_hit_width_right = STANDART_FIRST_CADR_RIGHT;
-				hit_aud.pause();
+				//hit_aud.pause();
 				me_stun = OFF;
 				setTimeout(stay_here, 150);
 			}
@@ -382,7 +382,7 @@ function hit(){
 				
 				setTimeout(repmake_150px, 150);
 				cadr_hit_width_left = STANDART_FIRST_CADR_LEFT;
-				hit_aud.pause();
+				//hit_aud.pause();
 				me_stun = OFF;
 				setTimeout(stay_here, 150);
 			}

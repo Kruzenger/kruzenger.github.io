@@ -138,7 +138,7 @@ addEventListener("keyup", pre_cheking_stay);
 function pre_cheking_stay(){
 	me_run = OFF;
 
-	run_aud.pause();
+	//run_aud.pause();
 	play_or_not = OFF;
 	setTimeout(function(){
 		if (me_run == OFF) {

@@ -99,7 +99,7 @@ function WAlking(e){
         			charge();
         		}
         		break;
- 			case 69:    // если нажата клавиша S
+ 			case 83:    // если нажата клавиша S
  				if (me_stun == OFF && me_dead == OFF) {
  					run_right = OFF;
 					run_left = OFF
@@ -123,7 +123,7 @@ function WAlking(e){
  					hit();
  				}
  				break;
- 			case 83:
+ 			case 69:
  				if (me_stun == OFF && me_dead == OFF && npc_talked == OFF && npc_angry == OFF) {
  					me_stun = ON;
  					setTimeout(function(){ me_stun = OFF; }, 1500);

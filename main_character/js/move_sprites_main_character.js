@@ -703,8 +703,7 @@ function restart_after_death(){
 	window_agree.style.opacity = '1';
 	Q_wind.innerHTML = "You're dead"
 	var restart = document.createElement('div');
-	restart.onklick = reloading;
-	restart.id = 'restar';
+	restart.onclick = reloading;
 	restart.className = 'restart';
 	window_agree.appendChild(restart);
 }

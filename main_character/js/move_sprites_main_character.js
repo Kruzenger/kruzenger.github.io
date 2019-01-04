@@ -19,7 +19,7 @@ moving_enemy2();
 
 NPC_what_to_do();
 
-setInterval(npc_moving_run, 5)
+setInterval(npc_moving_run, 5);
 
 am_I_alive();
 
@@ -703,8 +703,9 @@ function restart_after_death(){
 	window_agree.style.opacity = '1';
 	Q_wind.innerHTML = "You're dead"
 	var restart = document.createElement('div');
-	restart.className = 'restart';
 	restart.onklick = reloading;
+	restart.id = 'restar';
+	restart.className = 'restart';
 	window_agree.appendChild(restart);
 }
 function reloading(){

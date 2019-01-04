@@ -704,6 +704,6 @@ function restart_after_death(){
 	Q_wind.innerHTML = "You're dead"
 	var restart = document.createElement('div');
 	restart.className = 'restart';
-	restart.addEventListener('click', function(){location.reload();});
+	restart.onklick = function(){location.reload();};
 	window_agree.appendChild(restart);
 }

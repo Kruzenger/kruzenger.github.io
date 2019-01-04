@@ -1,12 +1,3 @@
-var main_theme = document.getElementById('main_theme');
-var attackNT_sound = document.getElementById('attackNT_sound');
-var attackS_sound = document.getElementById('attackS_sound');
-var music_on = document.getElementById('music_on');
-var music_on_l = 0;
-var settings_release = document.getElementById('settings_icon_svg');
-var settings_release_open = 0;
-var settings = document.getElementById('settings');
-
 
 main_theme.volume = 0.1;
 
@@ -19,6 +10,8 @@ function sound_after_attack(){
 function sound_after_s_attack(){
 	attackS_sound.play();
 };
+
+
 
 music_on.onclick = function(){
 	if (music_on_l == 0){
@@ -41,3 +34,8 @@ settings_release.onclick = function(){
 		settings_release_open = 0;
 	}
 }
+
+
+function block_sound(){
+	block.play();
+};

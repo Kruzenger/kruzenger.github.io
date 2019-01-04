@@ -164,7 +164,7 @@
 		height: 500px;
 		background: url(../img/interfase/Qestion.gif);
 		bottom: 2300px;
-		z-index: 9900;
+		z-index: 99000;
 		transition: opacity 2s, visibility 0s linear 0.3s;
 		opacity: 0;
 	}

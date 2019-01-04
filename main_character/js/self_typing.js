@@ -65,10 +65,10 @@ function agree_or_not(){
 	no.id = 'NO';
 	ok.className = 'objects';
 	no.className = 'objects';
-	ok.addEventListener('click', player_helps_him);
-	no.addEventListener('click', player_do_not_help_him);
 	window_agree.appendChild(ok);
 	window_agree.appendChild(no);
+	ok.onclick = 'player_helps_him()';
+	no.onclick = 'player_do_not_help_him()';
 	darkness.style.opacity = '1';
 	window_agree.style.opacity = '1';
 	me_stun = ON;	 

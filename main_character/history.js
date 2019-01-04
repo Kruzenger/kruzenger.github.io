@@ -21,8 +21,5 @@ next.onclick = function(){
 
 
 skip.onclick = function(){
-	next.style.display = 'none';
-	images.style.display = 'none';
-	images.style.zIndex = 0;
-	this.style.display = 'none';
+	history_window.remove();
 }

@@ -14,9 +14,7 @@ next.onclick = function(){
 		images.src = "../img/history_3.jpg";
 		number_next++;
 		if(number_next == 3){
-			next.remove();
-			images.remove();
-			skip.remove();
+			history_window.remove();
 		}
 	}
 }

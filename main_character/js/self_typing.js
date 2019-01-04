@@ -61,8 +61,8 @@ function need_help() {
 function agree_or_not(){
 	var ok = document.createElement('div');
 	var no = document.createElement('div');
-	ok.onclick = 'player_helps_him()';
-	no.onclick = 'player_do_not_help_him()';
+	ok.onclick = player_helps_him;
+	no.onclick = player_do_not_help_him;
 	ok.id = 'OK';
 	no.id = 'NO';
 	ok.className = 'objects';

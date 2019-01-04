@@ -53,10 +53,10 @@ function WAlking(e){
         			me_run = ON;
         			run_left = ON;
         			run_right = OFF;
-        			/*if (play_or_not == OFF) {
+        			if (play_or_not == OFF) {
         				run_aud.play();
         				play_or_not = ON;
-        			}*/
+        			}
         			walk();
 				}
 				break;
@@ -69,10 +69,10 @@ function WAlking(e){
         			side = RIGHT; 
         			run_right = ON;
         			run_left = OFF;
-        			/*if (play_or_not == OFF) {
+        			if (play_or_not == OFF) {
         				run_aud.play();
         				play_or_not = ON;
-        			}*/
+        			}
            			walk();  
 				}
 				break;

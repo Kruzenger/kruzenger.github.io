@@ -1,6 +1,7 @@
 var skip = document.getElementById('skip');
 var next = document.getElementById('next');
 var images = document.getElementById('history_img');
+var history_window = document.getElementById('history_window');
 var number_next = 0;
 
 

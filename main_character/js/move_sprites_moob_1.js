@@ -186,6 +186,7 @@ function atack1(){
 		}
 		else{
 			enemy_atack_right_X1 += CADR;
+			block_sound();
 			setTimeout(atack1, 70);
 		}
 	}
@@ -205,6 +206,7 @@ function atack1(){
 		}
 		else{
 			enemy_atack_left_X1 -= CADR;
+			block_sound();
 			setTimeout(atack1, 70);
 		}
 	}

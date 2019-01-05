@@ -215,7 +215,7 @@ var counter_state = 0;
 var speed = 35;
 
 //////audio///////
-
+var run_aud = document.getElementById('run_aud');
 var main_theme = document.getElementById('main_theme');
 var attackNT_sound = document.getElementById('attackNT_sound');
 var attackS_sound = document.getElementById('attackS_sound');

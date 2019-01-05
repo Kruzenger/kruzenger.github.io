@@ -53,10 +53,10 @@ function WAlking(e){
         			me_run = ON;
         			run_left = ON;
         			run_right = OFF;
-        			/*if (play_or_not == OFF) {
+        			if (play_or_not == OFF) {
         				run_aud.play();
         				play_or_not = ON;
-        			}*/
+				}
         			walk();
 				}
 				break;
@@ -69,10 +69,10 @@ function WAlking(e){
         			side = RIGHT; 
         			run_right = ON;
         			run_left = OFF;
-        			/*if (play_or_not == OFF) {
+        			if (play_or_not == OFF) {
         				run_aud.play();
         				play_or_not = ON;
-        			}*/
+				}
            			walk();  
 				}
 				break;
@@ -138,7 +138,7 @@ addEventListener("keyup", pre_cheking_stay);
 function pre_cheking_stay(){
 	me_run = OFF;
 
-	//run_aud.pause();
+	run_aud.pause();
 	play_or_not = OFF;
 	setTimeout(function(){
 		if (me_run == OFF) {
@@ -292,6 +292,7 @@ function charge(){
 }
 
 function shield(){
+	run_aud.pause();
 	if (side == RIGHT) {
 		main_character.style.backgroundPositionX = '-' + cadr_wight_right_sheld + 'px';
 		main_character.style.backgroundPositionY = '-' + cadr_height_stay + 'px';

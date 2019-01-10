@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+	<link rel="stylesheet" href="player.css">   
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+<body>
+	<!--audio-->
+	<audio src="../audio/KaerMorhen.mp3" id="main_theme" volume="0" loop="loop"></audio>
+	<audio src="../audio/attackNT_sound.mp3" id="attackNT_sound"></audio>
+	<audio src="../audio/hit_s.wav" id="attackS_sound"></audio>
+	<audio src="../audio/block.wav" id="block"></audio>
+	<audio src="../audio/zvuk-bega-po-trave-[AudioTrimmer.com].mp3" id="run_aud"></audio>
+	<!--End of audio-->
+
+<div id="All" align="center">
+
+		<div id="BG">
+	
+			<div class="history" align="center" id="history_window">
+				<img id="history_img" src="../img/history_1.jpg">
+				<div id="next">
+					<p>Next</p>
+				</div>
+				<div id="skip">
+					<p>Skip</p>
+				</div>
+			</div>
+			
+					<div id="settings">
+						<div class="settings_wrapper">
+							<div class="logo">
+								<p>From ash and dust</p>
+							</div>
+							<p class="settings_release">Properties</p>
+							<div class="list_of_settings">
+								<div class="volume_settings_wrapper">
+									<a class="volume_settings">Music</a>
+									<div class="hover_volume_settings">
+										<img id="music_on" src="../img/speaker.png">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="settings_icon">
+						<img id="settings_icon_svg" src="../img/cog.svg">
+					</div>
+
+
+			<progress id="HP_bar" value="100" max="100"></progress>
+			<progress id="Stamina_bar" value="100" max="100"></progress>
+
+			<div id=Game>
+
+    			<div id="main_character" class="objects"></div>
+				<div id="enemy1" class="objects">
+    				<progress id="Health_of_enemy1" value="100" max="100" class="objects"></progress>
+				</div>
+				<div id="enemy2" class="objects">
+					<progress id="Health_of_enemy2" value="100" max="100" class="objects"></progress>
+				</div>
+				<div id="enemy3" class="objects">
+					<progress id="Health_of_enemy3" value="100" max="100" class="objects"></progress>
+				</div>
+				<div id="boss" class="objects">
+				</div>
+
+				<div id="spear1" class="objects"></div>
+				<div id="spear2" class="objects"></div>
+				<div id="spear3" class="objects"></div>
+
+				<div id="NPC" class="objects"></div>
+				<div id="statement" class="objects">
+					<p id="state" align="center"></p>
+				</div>
+
+				<div id="window" class="objects" align="center">
+					<p class="objects" id="Q_wind">Would you like to help him?</p>
+				</div>
+
+				<progress id="boss_health" value="600" max="600" class="objects"></progress>
+				<div id="heal"></div>
+ 			</div>
+			<div id="darkness"></div>
+		</div>
+			<p id="field_for_text" align="center">
+				<p id="txt" align="center"></p>
+			</p>
+			<div id="quest_list">
+				<div id="header">Quests:</div>
+				<div id="quest1">
+					<div id="quest_content1" class="qus">#1)_ Talk with trador</div>
+				</div>
+				<div id="quest2" class="qus">
+					<div class="quest_content"></div>
+				</div>
+			</div>
+	</div>
+
+	<script src="../main_character/js/ALL_const_and_var.js"></script>
+
+	<script type="text/javascript" src="../main_character/js/audio.js"></script>
+
+ 	<script type="text/javascript" src="../main_character/js/history.js"></script>
+
+	<script src="../main_character/js/self_typing.js"></script>
+
+	<script src="../main_character/js/move_sprites_moob_1.js"></script>
+
+	<script src="../main_character/js/move_sprites_moob_2.js"></script>
+
+	<script src="../main_character/js/move_sprites_moob_3.js"></script>
+
+	<script src="../main_character/js/NPC.js"></script>
+
+    <script src="../main_character/js/move_sprites_main_character.js"></script>
+
+
+</body>
+</html>

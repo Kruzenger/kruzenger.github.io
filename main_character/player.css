@@ -1,0 +1,498 @@
+
+	body{
+    	font-family: 'Oswald', sans-serif;
+	}
+
+	#BG{
+		overflow: hidden;
+		background: url(../img/environment_forestbackground.gif);
+		height: 600px; 
+		width: 1200px;
+		margin-top: 10px;
+		position: relative;
+	}
+
+	#All{
+		margin-top: 100px;
+	}
+
+	#Game{
+		height: 300px;
+	}
+
+	#Game .objects{
+		position: relative;
+		margin-top: 200px;
+	}
+
+	#field_for_text{
+		position: relative;
+		left: 150px;
+		top: -550px;
+		width: 700px;
+		height: 50px;
+		background: #ffffffb3;
+		transition: opacity 3s, visibility 0s linear 0.3s;
+		opacity: 0;
+		border-radius: 20px;
+	}
+
+	#txt{
+		position: relative;
+		top: -610px;
+		left: 160px;
+		width: 600px;
+		height: 40px;
+	}
+/*////////////////////////////////////////////////////////////////*/
+
+	#main_character{
+        background-image: url(../img/Stay_&_walk_&_charge.gif);
+        height: 150px;
+        width: 150px;
+        top: 150px;
+        left: 0px;
+        z-index: 1000;
+        background-position-x: -1250px; 
+        background-position-y: -150px;
+    }
+
+    #Stamina_bar{
+    	width: 200px;
+    	height: 15px;
+    	right: 430px; 
+    	position: relative;
+    	top: 25px;
+    	border-radius: 8px;
+    	border: 2px solid #fff;
+    	text-align: center;
+    	color: #fff;
+    	font-size: 14px;
+    	line-height: 13px;
+    	visibility: hidden;
+    }
+
+    #HP_bar{
+    	top: 20px;
+    	width: 200px;
+    	height: 15px;
+    	right: 430px;
+    	position: relative;
+    	border-radius: 8px;
+    	border: 2px solid #fff;
+    	text-align: center;
+    	color: #fff;
+    	font-size: 14px;
+    	line-height: 13px;
+    	visibility: hidden;
+    }
+
+    #Health{
+    	background: linear-gradient(to right ,#f00, #ff5900);
+    	border-radius: 5px;
+    	width: 200px;
+    	height: 15px;
+    }
+
+    #Stamina{
+		background: linear-gradient(to right ,#059e01, #00bf6d);
+    	border-radius: 5px;
+    	width: 200px;
+    	height: 15px;
+    }
+
+
+/*////////////////////////////////////////////////////////////////*/
+
+	#enemy1{
+    	background-image: url(../img/Moob_sprite_V1.gif);
+    	display: flex;
+    	height: 150px;
+    	width: 150px;
+    	top: -200px;
+    	left: 1500px;
+    	background-position-x: -1250px;
+    	background-position-y: -150px;
+  		transition: opacity 3s, visibility 0s linear 0.3s;
+	}
+
+	#Health_of_enemy1{
+		top: -190px;
+    	height: 7px;
+    	width: 100px;
+    	border-radius: 6px;
+    	border: 1px solid #fff;
+
+	}
+
+	#spear1{
+		background: url(../img/spear.gif);
+		height: 15px;
+		width: 100px;
+		left: -1100px;
+		bottom: 1180px;
+	}
+
+	#spear2{
+		background: url(../img/spear.gif);
+		height: 15px;
+		width: 100px;
+		left: -1100px;
+		bottom: 1395px;
+	}
+
+	#enemy2{
+		background-image: url(../img/Moob_sprite_V1.gif);
+    	display: flex;
+    	height: 150px;
+    	width: 150px;
+    	top: -550px;
+    	left: 4000px;
+    	background-position-x: -1250px;
+    	background-position-y: -150px;
+  		transition: opacity 3s, visibility 0s linear 0.3s;
+	}
+
+	#Health_of_enemy2{
+		top: -190px;
+    	height: 7px;
+    	width: 100px;
+    	border-radius: 6px;
+    	border: 1px solid #fff;
+	}
+
+	#spear3{
+		background: url(../img/spear.gif);
+		height: 15px;
+		width: 100px;
+		left: -1100px;
+		bottom: 1610px;
+	}
+
+	#enemy3{
+		background-image: url(../img/Moob_sprite_V1.gif);
+    	display: flex;
+    	height: 150px;
+    	width: 150px;
+    	top: -900px;
+    	left: 3700px;
+    	background-position-x: -1250px;
+    	background-position-y: -150px;
+  		transition: opacity 3s, visibility 0s linear 0.3s;
+	}
+
+	#Health_of_enemy3{
+		top: -190px;
+    	height: 7px;
+    	width: 100px;
+    	border-radius: 6px;
+    	border: 1px solid #fff;
+	}
+
+	#NPC{
+		background: url(../img/NPC.gif);
+		background-position-x: 1250px;
+		background-position-y: 150px;
+		height: 150px;
+		width: 150px;
+		bottom: 1895px; 
+		left: 300px;
+	}
+
+	#boss{
+
+	}
+
+	#boss_health{
+		bottom: 3400px;
+		opacity: 0;
+		height: 23px;
+		transition: opacity 3s, visibility 0s linear 0.3s;
+	}
+
+	#heal{
+		position: relative;
+		background: url(../img/GameObjects/Healing.png);
+		height: 58px;
+		width: 50px;
+		top: -3135px;
+		transition: opacity 2s, visibility 0s linear 0.3s;
+		left: 1800px;
+		opacity: 1;
+		z-index: 8998;
+	}
+
+	#enemy_health1{
+		width: 100px;
+		height: 7px;
+		border-radius: 5px;
+		background: linear-gradient(to right ,#f00, #ff5900);
+		float: left;
+	}
+
+	#enemy_health2{
+		width: 100px;
+		height: 7px;
+		border-radius: 5px;
+		background: linear-gradient(to right ,#f00, #ff5900);
+		float: left;
+	}
+
+	#enemy_health3{
+		width: 100px;
+		height: 7px;
+		border-radius: 5px;
+		background: linear-gradient(to right ,#f00, #ff5900);
+		float: left;
+	}
+
+
+/*////////////////////////////////////////////////////////////////*/
+
+	/*.znak{
+		position: relative;
+		z-index: 100px;
+		left: -50px;
+		top: -50px;
+		height: 50px;
+		width: 24px;
+		background: url(../img/voskl.gif);
+	}*/	
+
+	#statement{
+		height: 60px;
+		width: 270px;
+		bottom: 2330px;
+		background: #ffffffb3;
+		transition: opacity 3s, visibility 0s linear 0.3s;
+		opacity: 0;
+		border-radius: 20px 20px 20px 0px;
+	}
+
+	#state{
+		width: 250px;
+	}
+
+	/*//////////////////////////////////////////////////////////////*/
+
+	#window{
+		width: 400px;
+		height: 500px;
+		background: url(../img/interfase/Qestion.gif);
+		bottom: 2885px;
+		z-index: 9900;
+		transition: opacity 2s, visibility 0s linear 0.3s;
+		opacity: 0;
+	}
+
+	#darkness{
+		position: relative;
+		top: -538px;
+		width: 1200px;
+		height: 600px;
+		z-index: 9000;
+		transition: opacity 2s, visibility 0s linear 0.3s;
+		opacity: 0;
+		background: #171414b3;
+	}
+
+	#Q_wind{
+		top: 120px;
+		width: 350px;
+		font-size: 15px;
+		color: red;
+	}
+
+	#OK{
+		background: url(../img/interfase/Yes.gif);
+		width: 100px;
+		height: 36px;
+		left: -80px;
+		top: 80px;
+	}
+
+	#NO{
+		background: url(../img/interfase/No.gif);
+		width: 100px;
+		height: 36px;
+		left: 80px;
+		bottom: 156px; 
+	}
+
+	.restart{
+		background: url(../img/interfase/Restart.gif);
+		width: 100px;
+		height: 36px;
+		position: relative;
+		top: 350px;
+	}
+/*history*/
+
+.history{
+    display: flex;
+    z-index: 99999;
+    width: 1200px;
+    height: 700px;
+}
+
+.history img{
+    width: 1200px;
+    height: 600px;
+}
+
+#next{
+    background-color: #000000e6;
+    opacity: .8;
+    cursor: pointer;
+    position: absolute;
+    color: #aaa;
+    height: 55px;
+    width: 200px;
+    right: 0;
+	top: 40%;
+}
+
+#skip{
+    background-color: #000000e6;
+    opacity: .8;
+    cursor: pointer;
+    position: absolute;
+    color: #aaa;
+    height: 55px;
+    width: 200px;
+    right: 0;
+	top: 78%;
+}
+
+#skip:hover{
+    color: #fff;
+}
+
+#next:hover{
+    color: #fff;
+}
+
+/*settings*/
+
+#settings{
+    position: absolute;
+    background-color: #000000b3;
+    width: 300px;
+    height: 600px;
+    margin-left: 100px;
+    z-index: 999999;
+    font-family: 'Montserrat', sans-serif;
+    display: none;
+    transition: .5s;
+}
+
+.logo{
+    color: #fff;
+    font-size: 25px;
+}
+
+.list_of_settings{
+    margin-top: 100px;
+    color: #fff;
+}
+
+.volume_settings_wrapper{
+    width: 298px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #000;
+    transition: .3s;
+}
+
+.volume_settings_wrapper:hover{
+    border: 1px solid #aaa;
+    cursor: pointer;
+}
+
+.settings_release{
+    color: #5b5b5b;
+    width: 133px;
+    font-size: 23px;
+    border-bottom: 1px solid #2d2d2d;
+}
+
+.hover_volume_settings{
+    width: 300px;
+    height: 50px;
+    background-color: #000000b3;
+    position: absolute;
+    left: 100%;
+    display: none;
+    transition: .5s;
+}
+
+.volume_settings_wrapper:hover .hover_volume_settings{
+    display: block;
+}
+
+#music_on{
+    z-index: 
+    height: 50px;
+    width: 50px;
+}
+
+.settings_icon{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    z-index: 9998;
+    right: 0;
+    top: 0;
+}
+
+/*/////////////////////////////////////////////////////////////////////*/
+
+
+#quest_list{
+	height: 320px;
+	width: 220px;
+	position: relative;
+	top: -650px;
+	left: -430px;
+	background-color: #8c7eab33;
+	border-radius: 15px;
+	z-index: 10000;
+	visibility: hidden;
+}
+
+
+#header{
+	width: 170px;
+	height: 30px;
+	background-color: #0f060699;
+	position: relative;
+	top: 10px;
+	color: white;
+	text-align: center;
+	line-height: 28px;
+	border-radius: 5px;
+}
+
+	#quest1{
+		width: 150px;
+		height: 20px;
+		position: relative;
+		top: 20px;
+		left: -10px;
+	}
+
+	#quest_content1{
+		padding: 5px;
+		background-color: #0f060699;
+		color: white;
+		border-radius: 5px;
+	}
+
+	.qus:hover{
+		border: 1px solid #fff9;
+		height: 22px;
+		line-height: 21px;
+		cursor: pointer;
+	}

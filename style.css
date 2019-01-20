@@ -11,24 +11,26 @@
 .left_button{
 	-webkit-clip-path: polygon(0 0, 80% 0%, 100% 0, 100% 80%, 100% 100%, 27% 100%, 0 63%, 0 36%);
 	clip-path: polygon(0 0, 80% 0%, 100% 0, 100% 80%, 100% 100%, 27% 100%, 0 63%, 0 36%);
-	background-color: #158c0f;
+	background-color: #222;
 	width: 250px;
 	height: 100px;
 	text-align: center;
+	margin-right: -1px;
 }
 
 .logo{
 	-webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0 0);
 	clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0 0);
-	background-color: #17a010;
+	background-color: #224;
 	width: 350px;
 	height: 150px;
+	z-index: 3;
 }
 
 .right_button{
 	-webkit-clip-path: polygon(0 0, 80% 0%, 100% 0, 100% 64%, 73% 100%, 0 100%, 0 63%, 0 36%);
 	clip-path: polygon(0 0, 80% 0%, 100% 0, 100% 64%, 73% 100%, 0 100%, 0 63%, 0 36%);
-	background-color: #158c0f;
+	background-color: #222;
 	width: 250px;
 	height: 100px;
 }
@@ -50,7 +52,6 @@ header a{
 }
 
 .slider{
-	background-color: red;
 	width: 800px;
 	height: 400px;
 }
@@ -61,12 +62,12 @@ header a{
 }
 
 .main_content{
-	height: 800px;
+	height: 700px;
 	width: 70%;
-	background-color: red;
+	background-color: #1b6321;
 }
 
-body{
+.background_1{
 	display: flex;
 	justify-content: center;
 }
@@ -88,25 +89,54 @@ body{
 .sl__text{
 	position: absolute;
 	color: #fff;
-	bottom: 0;
-	text-align: center;
-	height: 50px;
-	width: 130px;
-	margin-bottom: 10px;
-	background-color: #000;
-	opacity: 0.8;
-	padding-top: 15px;
+	bottom: 70%;
+	margin-left: 20px;
 }
 
-.description{
+.sl__text p{
+	font-size: 25px;
+	color: orange;
+}
+
+.sl__text h3{
+	font-size: 30px;
+	color: #dbbb08;
+}
+
+
+.footer_wrapper{
+	background-color: #222;
+	height: 100px;
+	width: 100%;
+}
+
+.background_2{
+	background-image: url(volshebnoe_derevo_secretworlds.ru.jpg);
+}
+
+.play_button{
+	font-size: 70px;
+}
+
+.play_wrapper{
 	display: flex;
 	justify-content: center;
-	margin-top: 100px;
-	background-color: green;
-	height: 300px;
 }
 
-.description h2{
-	color: #fff;
-	font-size: 35px;
+.play_wrapper a{
+	margin-top: 20px;
+}
+
+.play_button:hover{
+	text-shadow: 2px 2px 50px #1C6EA4;
+}
+
+.help_button_text:hover{
+	text-shadow: 2px 2px 50px #aaa;
+}
+
+.right_button_link{
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
 }

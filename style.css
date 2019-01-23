@@ -13,17 +13,17 @@
 	clip-path: polygon(0 0, 80% 0%, 100% 0, 100% 80%, 100% 100%, 27% 100%, 0 63%, 0 36%);
 	background-color: #222;
 	width: 250px;
-	height: 100px;
+	height: 70px;
 	text-align: center;
 	margin-right: -1px;
 }
 
 .logo{
-	-webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0 0);
-	clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0 0);
+	-webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 70%, 80% 100%, 20% 100%, 0% 70%, 0 0);
+	clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 70%, 80% 100%, 20% 100%, 0% 70%, 0 0);
 	background-color: #224;
 	width: 350px;
-	height: 150px;
+	height: 100px;
 	z-index: 3;
 }
 
@@ -32,7 +32,7 @@
 	clip-path: polygon(0 0, 80% 0%, 100% 0, 100% 64%, 73% 100%, 0 100%, 0 63%, 0 36%);
 	background-color: #222;
 	width: 250px;
-	height: 100px;
+	height: 70px;
 }
 
 header a{
@@ -42,7 +42,7 @@ header a{
 }
 
 .left_button_link{
-	margin-top: 20px;
+	margin-top: 5px;
 }
 
 .main_wrapper{
@@ -54,6 +54,7 @@ header a{
 .slider{
 	width: 800px;
 	height: 400px;
+	margin-top: -40px;
 }
 
 .sl_img{
@@ -65,6 +66,9 @@ header a{
 	height: 700px;
 	width: 70%;
 	background-color: #1b6321;
+	-webkit-box-shadow: inset 0px -24px 31px -4px rgba(0,0,0,0.63);
+	-moz-box-shadow: inset 0px -24px 31px -4px rgba(0,0,0,0.63);
+	box-shadow: inset 0px -24px 31px -4px rgba(0,0,0,0.63);
 }
 
 .background_1{
@@ -124,7 +128,7 @@ header a{
 }
 
 .play_wrapper a{
-	margin-top: 20px;
+	margin-top: 5px;
 }
 
 .play_button:hover{
@@ -136,7 +140,29 @@ header a{
 }
 
 .right_button_link{
-	margin-top: 20px;
+	margin-top: 5px;
 	display: flex;
 	justify-content: center;
+}
+
+.feedback{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.feedback_table{
+	font-size: 25px;
+	color: #fff;
+}
+
+.vk{
+	text-decoration: none;
+	font-size: 20px;
+	color: orange;
+}
+
+.e-mail{
+	color: #f4791a;
+	font-size: 20px;
 }
